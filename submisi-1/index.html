@@ -1,28 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Submisi 1 PWA</title>
-    <meta name="description" content="My first PWA"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
+
 <body>
 
-<nav class="blue" role="navigation">
-    <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo">My First PWA</a>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger">&#9776;</a>
+<!-- navigasi-->
+<div class="navbar-fixed">
+    <nav class="blue darken-2">
+        <div class="nav-wrapper container">
+            <a href="#home" class="brand-logo">FA</a>
+            <a href="#" data-target="mobile-nav" class="sidenav-trigger"><i class="material-icons">menu</i></a>
 
-        <ul class="topnav right hide-on-med-and-down"></ul>
-        <ul id="nav-mobile" class="sidenav"></ul>
-    </div>
-</nav>
+            <ul class="topnav right hide-on-med-and-down"></ul>
+        </div>
+    </nav>
+</div>
 
-<div class="body-content container"></div>
+<ul class="sidenav" id="mobile-nav"></ul>
+<!--akhir navigasi-->
+
+<!--slider-->
+<div class="slider scrollspy" id="home">
+    <ul class="slides">
+        <li>
+            <img src="imgs/slider/slider-1.jpg">
+            <div class="caption center-align">
+                <h5 class="text-darken-4">HELLO, WORLD.</h5>
+                <h3 class="white-text text-darken-4">I'm Fordyta Abubakar.</h3>
+            </div>
+        </li>
+        <li>
+            <img src="imgs/slider/slider-2.jpg">
+        </li>
+        <li>
+            <img src="imgs/slider/slider-3.jpg">
+        </li>
+    </ul>
+</div>
+<!--akhir slider-->
+
+<!--content-->
+<div include-html="pages/about.html" class="scrollspy" id="about"></div>
+
+<div include-html="pages/portfolio.html" class="scrollspy" id="portfolio"></div>
+
+<div include-html="pages/services.html" class="scrollspy" id="services"></div>
+
+<div include-html="pages/footer.html" class="scrollspy" id="contact"></div>
+<!--akhir content-->
 
 
-<script src="js/materialize.min.js"></script>
-<script src="js/nav.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/nav.js"></script>
 </body>
 </html>
