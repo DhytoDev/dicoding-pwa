@@ -12,7 +12,6 @@ document.addEventListener(
         M.ScrollSpy.init(scroll, {
             scrollOffset: 50
         });
-        console.log(scroll);
 
         function loadNav() {
             var xHttp = new XMLHttpRequest();

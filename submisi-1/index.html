@@ -3,6 +3,8 @@
 <head>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#1976D2"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 
@@ -24,37 +26,66 @@
 <!--akhir navigasi-->
 
 <!--slider-->
-<div class="slider scrollspy" id="home">
+<div class="slider scrollspy home" id="home">
     <ul class="slides">
         <li>
             <img src="imgs/slider/slider-1.jpg">
             <div class="caption center-align">
+                <br>
                 <h5 class="text-darken-4">HELLO, WORLD.</h5>
                 <h3 class="white-text text-darken-4">I'm Fordyta Abubakar.</h3>
             </div>
         </li>
         <li>
             <img src="imgs/slider/slider-2.jpg">
+            <div class="caption center-align">
+                <br>
+                <h4 class="text-darken-4">[ Sebarkan walau sebaris kode ]</h4>
+                <a href="https://github.com/dhytodev" target="_blank" class="btn blue">Github Account</a>
+            </div>
         </li>
         <li>
             <img src="imgs/slider/slider-3.jpg">
+            <div class="caption right-aligned">
+                <br>
+                <h4 class="text-darken-4">Mari berilmu dan bermanfaat!</h4>
+                <h6 class="text-darken-4">Sebaik-baik kita adalah yang berilmu dan bermanfaat.</h6>
+            </div>
         </li>
     </ul>
 </div>
 <!--akhir slider-->
 
 <!--content-->
-<div include-html="pages/about.html" class="scrollspy" id="about"></div>
+<div include-html="pages/about.html" class="scrollspy about" id="about"></div>
 
-<div include-html="pages/portfolio.html" class="scrollspy" id="portfolio"></div>
+<div include-html="pages/portfolio.html" class="scrollspy portfolio" id="portfolio"></div>
 
-<div include-html="pages/services.html" class="scrollspy" id="services"></div>
+<div include-html="pages/services.html" class="scrollspy services" id="services"></div>
 
-<div include-html="pages/footer.html" class="scrollspy" id="contact"></div>
+<div include-html="pages/footer.html" class="scrollspy contact" id="contact"></div>
 <!--akhir content-->
 
 
 <script type="text/javascript" src="js/materialize.min.js"></script>
 <script type="text/javascript" src="js/nav.js"></script>
+<script>
+    // REGISTER SERVICE WORKER
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function() {
+            navigator.serviceWorker
+                .register("/service-worker.js")
+                .then(function() {
+                    console.log("Pendaftaran ServiceWorker berhasil");
+                })
+                .catch(function() {
+                    console.log("Pendaftaran ServiceWorker gagal");
+                });
+        });
+    } else {
+        console.log("ServiceWorker belum didukung browser ini.");
+    }
+</script>
+
 </body>
 </html>
