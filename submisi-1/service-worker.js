@@ -1,4 +1,4 @@
-const CACHE_NAME = "submisi1-v0";
+const CACHE_NAME = "submisi1-v1";
 
 var filesToCache = [
     "/",
@@ -11,16 +11,16 @@ var filesToCache = [
     "/css/materialize.min.css",
     "/js/materialize.min.js",
     "/js/nav.js",
-    '/imgs/profile.jpeg',
-    '/imgs/slider/slider-1.jpg',
-    '/imgs/slider/slider-2.jpg',
-    '/imgs/slider/slider-3.jpg',
-    '/imgs/portfolio/1.png',
-    '/imgs/portfolio/2.png',
-    '/imgs/portfolio/3.png',
-    '/imgs/portfolio/4.png',
-    '/imgs/portfolio/5.png',
-    '/imgs/portfolio/6.png',
+    '/images/profile.jpeg',
+    '/images/slider/slider-1.jpg',
+    '/images/slider/slider-2.jpg',
+    '/images/slider/slider-3.jpg',
+    '/images/portfolio/1.png',
+    '/images/portfolio/2.png',
+    '/images/portfolio/3.png',
+    '/images/portfolio/4.png',
+    '/images/portfolio/5.png',
+    '/images/portfolio/6.png'
 ];
 
 self.addEventListener("install", function(event) {
